@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./styles/homepage.css">
     <script src="./Javascript/homepage.js"></script>
    
@@ -13,7 +17,7 @@
     <!-- Nav bar -->
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#">Nischay</a></div>
+            <div class="logo"><a href="#">Vote Smart</a></div>
             <ul class="links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -39,14 +43,15 @@
                 <img src="./images/Political Candidate-bro.png" alt="" class="hero-img">
             </div>
             <div class="content">
-                <h3>TwoLabs Optics</h3>
-                <p><b>High Innovation Professional Eye Care </b> <br>A comprehensive eye clinic</p>
-                <a href="#" class="action_btn"> Explore More <span class="fas fa-chevron-right"> </span> </a>
+                <h3>Vote Smart</h3>
+            <p><b>Empowering Your Vote</b><br>Your trusted source for election information and voting resources.</p>
+            <a href="#" class="action_btn"> Get Started <span class="fas fa-chevron-right"></span> </a>
+
             </div>
         </div>
         <div class="key-features">
             
-            <h2>Key Features</h2>
+<h2>Key Features</h2>            
             <ul class="features-list">
                 <li class="feature-item">Security</li>
                 <li class="feature-item">Accessibility</li>
@@ -61,47 +66,148 @@
     <!-- About Us page -->
     <section id="about-us">
         <div class="about">
-
+            <h2>What is VoteSmart?</h2>
+            <p>VoteSmart is a secure and transparent platform designed to facilitate online voting for various elections and surveys. Our platform ensures the integrity and confidentiality of each vote, providing a reliable alternative to traditional voting methods.</p>
+            <p>Our mission is to empower communities and organizations by offering a user-friendly voting system that simplifies the voting process while maintaining the highest standards of security. We strive to make every vote count and believe in the power of technology to enhance democratic participation. Join us in making voting easier and more accessible for everyone.</p>
         </div>
     </section>
 
     <!-- Overview page -->
      <section id="overview">
-        <div class="elections">
-            <!-- Election 1 -->
-            <div class="election-card">
-                <div class="election-image">
-    
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div data-hash="slide1" class="swiper-slide">
+                <div class="sliding-item">
+                    <div class="sliding-image">
+                        <img src="./images/Political Candidate-bro.png" alt="election-day-image" class="topic-image">
+                    </div>
+                    <div class="sliding-text">
+                        <h1 class="title">Upcoming Elections: What You Need to Know</h1>
+                        <p class="content">
+                            The next major elections are scheduled for Nov.5, 2024. Make sure you are registered to vote by the deadline of October 10, 2024. Key positions up for election include the President and the Senate. Stay informed about the candidates and their platforms.
+                            <br>
+                            <span><a href="#" class="open-content">Register Now>>></a></span>
+                        </p>
+                    </div>
                 </div>
-                <div class="election-description">
-    
+                
+              </div>
+              <div data-hash="slide2" class="swiper-slide">
+                <div class="sliding-item">
+                    <div class="sliding-image">
+                        <img src="./images/Political Candidate-bro.png" alt="election-day-image" class="topic-image">
+                    </div>
+                    <div class="sliding-text">
+                        <h1 class="title">Local Elections: Have Your Voice Heard</h1>
+                        <p class="content">
+                            Local elections are vital for community development. On August 15, 2024, vote for your local council members, mayors, and school board representatives. Ensure you know the candidates and their proposals to make an informed decision.
+                            <br>
+                            <span><a href="#" class="open-content">Register Now>>></a></span>
+                        </p>
+                    </div>
                 </div>
+                
+              </div>
+              <div data-hash="slide3" class="swiper-slide">
+                <div class="sliding-item">
+                    <div class="sliding-image">
+                        <img src="./images/Political Candidate-bro.png" alt="election-day-image" class="topic-image">
+                    </div>
+                    <div class="sliding-text">
+                        <h1 class="title">Primary Elections: Select Your Party's Candidate</h1>
+                        <p class="content">
+                            The primary elections on March 3, 2024, will determine each party's candidate for the general elections. Participate to ensure your preferred candidate makes it to the final ballot. Check your voter registration and know your polling location.
+                            <br>
+                            <span><a href="#" class="open-content">Register Now>>></a></span>
+                        </p>
+                    </div>
+                </div>
+                
+              </div>
+              <div data-hash="slide4" class="swiper-slide">
+                <div class="sliding-item">
+                    <div class="sliding-image">
+                        <img src="./images/Political Candidate-bro.png" alt="election-day-image" class="topic-image">
+                    </div>
+                    <div class="sliding-text">
+                        <h1 class="title">Voter Registration: Make Your Vote Count</h1>
+                        <p class="content">
+                            Ensure you are registered to vote before the deadline of September 30, 2024. Voting is a fundamental right and responsibility. Visit your local election office or register online to participate in the upcoming elections.
+                            <br>
+                            <span><a href="#" class="open-content">Register Now>>></a></span>
+                        </p>
+                    </div>
+                </div>
+                
+              </div>
+              <div data-hash="slide5" class="swiper-slide">
+                <div class="sliding-item">
+                    <div class="sliding-image">
+                        <img src="./images/Political Candidate-bro.png" alt="election-day-image" class="topic-image">
+                    </div>
+                    <div class="sliding-text">
+                        <h1 class="title">Election Day: Your Vote Matters</h1>
+                        <p class="content">
+                            November 5, 2024, is Election Day. Plan your schedule to ensure you can cast your vote. Check your polling location, opening hours, and what identification you need to bring. Every vote counts in shaping the future of our community and country.
+                            <br>
+                            <span><a href="#" class="open-content">Register Now>>></a></span>
+                        </p>
+                    </div>
+                </div>
+                
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <!-- Election 2 -->
-            <div class="election-card">
-                <div class="election-image">
-    
-                </div>
-                <div class="election-description">
-    
-                </div>
-            </div>
-             <!-- Election 3-->
-             <div class="election-card">
-                <div class="election-image">
-    
-                </div>
-                <div class="election-description">
-    
-                </div>
-            </div>
-        </div>
+            
+            
+           
+
+    </div>
         
      </section>
 
      <!-- How to use the app -->
-      <section id="how-to-use">
+      <section id="how-to-use" class="how-to-use">
+        <h1>Wondering How to get Started? Follow these Simple Steps:</h1>
 
+        <div class="voting-steps">
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="step-text">
+                    <h1 class="title">Step 1: Register or Log In</h1>
+                    <p class="content">
+                        Open the app and create a new account using your email or phone number. If you already have an account, simply log in with your credentials.
+                    </p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <div class="step-text">
+                    <h1 class="title">Step 2: Verify Your Identity</h1>
+                    <p class="content">
+                        Complete the identity verification process by uploading a photo ID and taking a selfie. This ensures the security and integrity of your vote.
+                    </p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-vote-yea"></i>
+                </div>
+                <div class="step-text">
+                    <h1 class="title">Step 3: Cast Your Vote</h1>
+                    <p class="content">
+                        Once verified, you can view the ballot and cast your vote. Make sure to review your choices before submitting. Your vote is important!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
       </section>
 
       <!-- FOOTER -->
