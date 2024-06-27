@@ -19,7 +19,8 @@ body
    width: 72px;
    padding: 10px;
    position: fixed;
-   
+   z-index: 2;
+   box-shadow: 2px 2px 2px rgb(186, 185, 185);
 }
 .logo-content
 {
@@ -198,9 +199,16 @@ body
 
 
 /* UPCOMING ELECTION */
-.card{
-    height: 500px;
+.upcoming-elections{
+    padding-top: 80px;
+    margin-left: 17%;
+    margin-right: 17%;
+   z-index: -1;
 }
+.election-container{
+    z-index: 1;
+}
+
  .rounded-bottom-image {
     position: relative;
     overflow: hidden;
@@ -212,4 +220,21 @@ body
     height: fit-content;
     object-fit: contain;
     object-position: center;
-} 
+}
+@media (max-width:868px) {
+    .upcoming-elections{
+        padding: 50px 10px 50px 10px;
+        margin-left: 17%;
+        margin-right: 0;
+        margin-top: 0;
+        z-index: -1;
+        flex-direction: column;
+    }
+    
+    
+    .navbar-content li:hover .tooltip
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+      } 
