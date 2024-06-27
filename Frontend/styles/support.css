@@ -8,9 +8,9 @@
 }
 body
 {
-    
     background-color: rgb(240, 244, 247);
 }
+/* SIDEBAR SECTION */
 .sidebar
 {   min-height: 100vh;
     height: 100%;
@@ -42,6 +42,7 @@ body
 
 .navbar-content
 {
+    padding: 0;
     list-style: none;
     line-height: 50px;
 }
@@ -58,7 +59,7 @@ body
 {
    margin-left: 15px;
 }
-.navbar-content li a:hover
+.sidebar.active .navbar-content li a:hover
 {
     background-color: rgba(0, 0, 0, 0.733);
     color: antiquewhite;
@@ -104,7 +105,6 @@ body
 {
     padding-left: 15px;
     visibility: hidden;
-    
 }
 
 
@@ -168,13 +168,15 @@ body
     text-align: center;
     border-radius: 8px;
     top: -5px;
-    left: 105%; 
+    left: 20%; 
     z-index: 1;
 }
 .navbar-content li:hover .tooltip
 {
     visibility: visible;
+    opacity: 1;
 }
+
 
 /*COLLAPS SIDE BAR*/
 .sidebar.active
@@ -201,3 +203,98 @@ body
 {
     visibility: hidden;
 }
+
+
+/* SUPPORT SECTION */
+.support-container{
+    display: flex;
+    padding-top: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
+    gap: 20px;
+    align-items: center;
+    z-index: -1;
+}
+.accordion-container {
+    margin: 20px;
+    z-index: 1;
+}
+.sidebar.active + .support-container .accordion-container {
+    z-index: -1; /* Push accordion container behind when sidebar is active */
+}
+
+
+
+.card {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+.card-header span{
+    padding-left: 15px;
+}
+
+.card-header {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.card-header .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.card-header .btn i {
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+}
+
+.card-header .btn.collapsed i {
+    transform: rotate(0deg);
+}
+
+.card-header .btn i {
+    transform: rotate(45deg);
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #f8f9fa;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.card-header:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width:868px) {
+.support-container{
+    padding: 80px;
+    margin: 10%;
+    margin-top: 0;
+    z-index: -1;
+    flex-direction: column;
+}
+.navbar-content li:hover .tooltip
+{
+    visibility: hidden;
+    opacity: 1;
+}
+  }
+  @media (max-width:668px) {
+    .support-container{
+        padding: 20px;
+        
+    }
+      }
+

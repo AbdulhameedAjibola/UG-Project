@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/support.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <title>Support</title>
+</head>
+<body>
+    <div id="app">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-content">
+                    <div class="logo-text">
+                        Vote Smart
+                    </div>
+                    <div class="menu">
+                        <i class='bx bx-menu' id="hamBtn"></i>
+                    </div>
+                </div>
+    
+                <div class="navbar">
+                    <ul class="navbar-content">
+                        <li>
+                            <a href="../html/dashboard.html">
+                                <i class='bx bx-user'></i>
+                                <span class="list-item">Profile</span>
+                            </a>
+                            <span class="tooltip">Profile</span> 
+                        </li>
+    
+                        <li>
+                            <a href="../html/voting-history.html">
+                                <i class='bx bx-history'></i>
+                                <span class="list-item">Voting History</span>
+                            </a>
+                            <span class="tooltip">History</span> 
+                        </li>
+    
+                        <li>
+                            <a href="../html/upcoming-elections.html">
+                                <i class='bx bx-calendar-alt'></i>
+                                <span class="list-item">Available Elections</span>
+                            </a>
+                            <span class="tooltip">Elections</span> 
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-help-circle'></i>
+                                <span class="list-item">Help/Support</span>
+                            </a>
+                            <span class="tooltip">Support</span> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile">
+                    <div class="profile-details">
+                        Logout
+                    </div>
+                    <div class="logout">
+                        <button><i class='bx bx-log-out'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="support-container">
+            <div id="accordion" class="accordion-container">
+                <h1>Frequently Asked Questions</h1>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                            <span>How do I create an account?</span> <i class="fas fa-plus-circle"></i>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            To create an account, click on the "Sign Up" button on the homepage, fill in your details, and submit the form. You will receive a verification email to activate your account.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                            <span>How do I vote in an election?</span> <i class="fas fa-plus-circle"></i>
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Once logged in, navigate to the "Elections" section, select the ongoing election you want to participate in, and cast your vote. Confirm your choice to ensure your vote is recorded.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                            <span>Can I change my vote after submitting?</span> <i class="fas fa-plus-circle"></i>
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            No, once you have confirmed and submitted your vote, it is final and cannot be changed. Please review your choices carefully before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
+                            <span>How is my vote kept anonymous?</span> <i class="fas fa-plus-circle"></i>
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Our voting system uses end-to-end encryption to ensure your vote is anonymous and secure. Your personal data is not linked to your voting choices.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFive">
+                            <span>How can I see the results of the election?</span> <i class="fas fa-plus-circle"></i> 
+                        </a>
+                    </div>
+                    <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            Once the election is concluded, the results will be published in the "Results" section. You will be notified via email when the results are available.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- CONTACT US -->
+            <div class="container mt-5">
+                <h1>Contact Us!</h1>
+                <form class="row g-3" action="" method="POST">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="name" id="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="Last Name" id="lastName" required>
+                    </div>
+                    <div class="col-md-8">
+                        <label for="emailInfo" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" name="email" id="emailInfo" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" name="phone" id="phoneNumber" placeholder="+1 (415) 867-5309">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="comments" class="form-label">Comments, questions?</label>
+                        <textarea class="form-control" id="comments" name="comments, questions" rows="3" required></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn">Submit &rarr;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="../Javascript/support.js"></script>
+</body>
+</html>
