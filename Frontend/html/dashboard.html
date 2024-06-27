@@ -17,7 +17,7 @@
             <div class="sidebar-content">
                 <div class="logo-content">
                     <div class="logo-text">
-                        Arbitex.
+                        Vote Smart
                     </div>
                     <div class="menu">
                         <i class='bx bx-menu' id="hamBtn"></i>
@@ -28,68 +28,37 @@
                     <ul class="navbar-content">
                         <li>
                         <a href="#">
-                            <i class='bx bx-grid-alt' ></i>
-                            <span class="list-item">Dashboard</span>
-                        </a>
-                            <span class="tooltip">Dashboard</span>
-                      </li>
-    
-                      <li>
-                        <a href="#">
                             <i class='bx bx-user' ></i>
-                            <span class="list-item">Profile</span>
+                            <span class="list-item" @click="setActiveComponent('Profile')">Profile</span>
                         </a>
                          <span class="tooltip">Profile</span> 
                       </li>
     
                       <li>
                         <a href="#">
-                            <i class='bx bx-chat' ></i>
-                            <span class="list-item">Messages</span>
+                            <i class='bx bx-history' ></i>
+                            <span class="list-item" @click="setActiveComponent('VotingHistory')">Voting History</span>
                         </a>
-                             <span class="tooltip">Messages</span> 
+                             <span class="tooltip">History</span> 
                       </li>
     
                       <li>
                         <a href="#">
-                            <i class='bx bx-pie-chart-alt-2' ></i>
-                            <span class="list-item">Analytics</span>
+                            <i class='bx bx-calendar-alt' ></i>
+                            <span class="list-item" @click="setActiveComponent('AvailableElections')">Available Elections</span>
                         </a>
-                             <span class="tooltip">Analytics</span> 
+                             <span class="tooltip">Elections</span> 
                       </li>
     
                       <li>
                         <a href="#">
-                            <i class='bx bx-folder' ></i>
-                            <span class="list-item">File Manager</span>
+                            <i class='bx bx-help-circle' ></i>
+                            <span class="list-item" @click="setActiveComponent('support')">Help/Support</span>
                         </a>
-                             <span class="tooltip">File Manager</span> 
+                             <span class="tooltip">Support</span> 
                       </li>
     
-                      <li>
-                        <a href="#">
-                            <i class='bx bx-cart-alt' ></i>
-                            <span class="list-item">Order</span>
-                        </a>
-                             <span class="tooltip">Order</span> 
-                      </li>
-    
-                      <li>
-                        <a href="#">
-                            <i class='bx bx-heart' ></i>
-                            <span class="list-item">Saved</span>
-                        </a>
-                         <span class="tooltip">Saved</span> 
-                      </li>
-    
-                      <li>
-                        <a href="#">
-                            <i class='bx bx-cog' ></i>
-                            <span class="list-item">Settings</span>
-                        </a>
-                         <span class="tooltip">Settings</span> 
-                      </li>
-    
+                      
                     </ul>
                 </div>
                 <div class="profile">
