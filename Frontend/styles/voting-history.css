@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body
+{
+    background-color: rgb(240, 244, 247);
+    
+}
+/* SIDEBAR SECTION */
+.sidebar
+{   min-height: 100vh;
+    height: 100%;
+    background: white;
+   width: 72px;
+   padding: 10px;
+   position: fixed;
+   z-index: 2;
+   box-shadow: 2px 2px 2px rgb(186, 185, 185);
+}
+.logo-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-text
+{
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+#hamBtn
+{
+    line-height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar-content
+{
+    padding: 0;
+    list-style: none;
+    line-height: 50px;
+}
+.navbar-content li
+{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    
+    transition: all .5s;
+    margin-top: 10px;
+}
+.navbar-content li a i 
+{
+   margin-left: 15px;
+}
+.sidebar.active .navbar-content li a:hover
+{
+    background-color: rgba(0, 0, 0, 0.733);
+    color: antiquewhite;
+    border-radius: 8px;
+}
+.navbar-content li a 
+{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap;
+}
+.navbar-content li input
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    padding-left: 50px;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.list-item
+{
+    padding-left: 15px;
+    visibility: hidden;
+}
+
+
+
+.profile .logout button
+{
+    visibility: hidden;
+}
+/*  PROFILE SECTION */
+.profile
+{
+    position: absolute;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 60px;
+   color: antiquewhite;
+   padding: 10px;
+   background-color: black;
+   
+}
+
+.sidebar.active .profile-details
+{
+    visibility: visible;
+    font-size: 12px;
+    text-align: center;
+}
+.profile-details .name
+{
+    font-weight: 700;
+    font-size: 14px;
+}
+ .profile .logout button
+{
+    visibility: hidden;
+    background: none;
+    border: none;
+    color: antiquewhite;
+    font-size: 24px;
+}
+.sidebar.active .profile .logout button{
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* TOOLTIP SECTION */
+.tooltip
+{
+    position: absolute;
+    visibility: hidden;
+    margin-top: 5px;
+    margin-left: 10px;
+    line-height: 50px;
+    width: 120px;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    border-radius: 8px;
+    top: -5px;
+    left: 20%; 
+    z-index: 1;
+}
+.navbar-content li:hover .tooltip
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*COLLAPS SIDE BAR*/
+.sidebar.active
+{
+    width:240px;
+}
+.sidebar.active .logo-content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.sidebar.active .logo-content .logo-text
+{
+    font-size: 1.5em;
+}
+.sidebar.active .navbar-content .list-item
+{
+    visibility: visible;
+}
+.sidebar.active .navbar-content li:hover .tooltip
+{
+    visibility: hidden;
+}
+
+.voting-history{
+    padding-top: 50px;
+}
+@media (max-width:678px) {
+    .card{
+        margin-left: 17%;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    
+    
+    .navbar-content li:hover .tooltip
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+      } 
