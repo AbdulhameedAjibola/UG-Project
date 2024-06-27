@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/voting-history.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <title>Voting-History</title>
+</head>
+<body>
+    <div id="app">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo-content">
+                    <div class="logo-text">
+                        Vote Smart
+                    </div>
+                    <div class="menu">
+                        <i class='bx bx-menu' id="hamBtn"></i>
+                    </div>
+                </div>
+    
+                <div class="navbar">
+                    <ul class="navbar-content">
+                        <li>
+                            <a href="../html/dashboard.html">
+                                <i class='bx bx-user'></i>
+                                <span class="list-item">Profile</span>
+                            </a>
+                            <span class="tooltip">Profile</span> 
+                        </li>
+    
+                        <li>
+                            <a href="../html/voting-history.html">
+                                <i class='bx bx-history'></i>
+                                <span class="list-item">Voting History</span>
+                            </a>
+                            <span class="tooltip">History</span> 
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-calendar-alt'></i>
+                                <span class="list-item">Available Elections</span>
+                            </a>
+                            <span class="tooltip">Elections</span> 
+                        </li>
+    
+                        <li>
+                            <a href="../html/support.html">
+                                <i class='bx bx-help-circle'></i>
+                                <span class="list-item">Help/Support</span>
+                            </a>
+                            <span class="tooltip">Support</span> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile">
+                    <div class="profile-details">
+                        Logout
+                    </div>
+                    <div class="logout">
+                        <button><i class='bx bx-log-out'></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="voting-history container">
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/election1.jpg" class="img-fluid rounded-start" alt="Presidential Election">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Presidential Election 2024</h5>
+                        <p class="card-text">The national election to choose the next president of the country. This election saw a record turnout and was highly contested.</p>
+                        <p class="card-text"><small class="text-muted">Voted on: 2024-01-01</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/election2.jpg" class="img-fluid rounded-start" alt="Local Government Election">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Local Government Election 2024</h5>
+                        <p class="card-text">Election for local government representatives, including mayors and council members. Important for community-level decisions and governance.</p>
+                        <p class="card-text"><small class="text-muted">Voted on: 2024-02-15</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/election3.jpg" class="img-fluid rounded-start" alt="European Parliament Election">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">European Parliament Election 2024</h5>
+                        <p class="card-text">Election to choose representatives for the European Parliament, responsible for making decisions on a wide range of issues affecting the EU.</p>
+                        <p class="card-text"><small class="text-muted">Voted on: 2024-03-30</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../images/election4.jpg" class="img-fluid rounded-start" alt="Referendum">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">National Referendum 2024</h5>
+                        <p class="card-text">A national referendum on a significant policy issue, giving citizens the direct power to make decisions on key legislative changes.</p>
+                        <p class="card-text"><small class="text-muted">Voted on: 2024-05-20</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <script src="../Javascript/voting-history.js"></script>
+</body>
+</html>
