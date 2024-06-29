@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Dashboard</title>
 </head>
@@ -70,6 +71,48 @@
                     </div>
                         
                     
+                </div>
+            </div>
+        </div>
+        <div class="user-profile-section">
+            
+            <div class="user-details">
+                <span>Email: <span class="detail">akoredeajibola091@gmail.com</span></span>
+                <span>Age: <span class="detail">23</span></span>
+                <span>Gender: <span class="detail">Male</span></span>
+                <span>Password:
+                    <input :type="passwordFieldType" class="detail" value="QWerty12@" readonly />
+                    <i :class="passwordToggleIcon" @click="togglePasswordVisibility"></i>
+                </span>
+                <span>NIN: <span class="detail">2328884772</span></span>
+                <span>Local Government: <span class="detail">Alimosho</span></span>
+                <span>State: <span class="detail">Lagos</span></span>
+                <span>Anonymous ID:
+                    <input :type="anonymousIdFieldType" class="detail" value="aww23482xjs" readonly />
+                    <i :class="anonymousIdToggleIcon" @click="toggleAnonymousIdVisibility"></i>
+                </span>
+                <span>Phone Number: <span class="detail">08123456789</span></span>
+                <span>10 digit Code:
+                    <input :type="tenDigitFieldType" class="detail" value="4449224011" readonly />
+                    <i :class="tenDigitToggleIcon" @click="toggletenDigitVisibility"></i>
+                </span>
+                    
+            </div>
+            <div class="security-questions-sections">
+                <h2>Set Up your Security Questions for confirmation</h2>
+                <div class="security-questions">
+                    <div class="security-question">
+                        <span>What is your mother's maiden name?</span>
+                        <input type="text" class="question-answer">
+                    </div>
+                    <div class="security-question">
+                        <span>What is your dream country?</span>
+                        <input type="text" class="question-answer">
+                    </div>
+                    <div class="security-question">
+                        <span>icecream, yoghurt, pizza?</span>
+                        <input type="text" class="question-answer">
+                    </div>
                 </div>
             </div>
         </div>
