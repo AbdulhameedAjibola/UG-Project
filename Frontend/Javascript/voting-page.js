@@ -20,31 +20,45 @@ let app = new Vue({
                 symbol: '/Frontend/images/PDP.jpg'
             }
             // Add more candidates as needed
-        ]
+        ],
+        tenDigitCode: '',
+        questionOne: '',
+        questionTwo: '',
+        questionThree: '',
+        isPopupVisible: false,
+
     },
     methods: {
         submitVote() {
-            if (this.selectedCandidate) {
-                // Send the vote to the backend
-                fetch('/api/vote', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ candidateId: this.selectedCandidate })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert('Vote submitted successfully!');
-                    // Reset the selected candidate
-                    this.selectedCandidate = null;
-                })
-                .catch(error => {
-                    console.error('Error submitting vote:', error);
-                });
+            if (this.tenDigitCode && this.questionOne && this.questionTwo && this.questionThree) {
+                // Logic to send the vote data to the backend
+                const voteData = {
+                    candidateId: this.selectedCandidate,
+                    tenDigitCode: this.tenDigitCode,
+                    securityQuestions: {
+                        questionOne: this.questionOne,
+                        questionTwo: this.questionTwo,
+                        questionThree: this.questionThree
+                    }
+                };
+                // Replace the following alert with your actual backend submission logic
+                alert(`Vote submitted for candidate ${this.selectedCandidate}`);
+                this.closePopup();
             } else {
-                alert('Please select a candidate before submitting your vote.');
+                alert('Please fill in all the fields.');
             }
-        }
+        },
+       
+           
+        showPopup() {
+            if (this.selectedCandidate) {
+                this.isPopupVisible = true;
+            } else {
+                alert('Please select a candidate to vote for.');
+            }
+        },
+        closePopup() {
+            this.isPopupVisible = false;
+        },
     }
 });

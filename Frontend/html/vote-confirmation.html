@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/vote-confirmation.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>Authorize</title>
 </head>
 <body>
     <div id="app">
-        
+        <h1>Authorize your Vote!</h1>
+        <div class="ten-digit">
+            <p>Please enter your assigned 10 Digit code</p>
+            <input type="password" name="code" v-model="tenDigitCode" id="">
+        </div>
+        <div class="questions">
+            <div class="security-question">
+                <span>What is your mother's maiden name?</span>
+                <input type="text" class="question-answer" v-model="questionOne">
+            </div>
+            <div class="security-question">
+                <span>What is your dream country?</span>
+                <input type="text" class="question-answer" v-model="questionTwo">
+            </div>
+            <div class="security-question">
+                <span>Ice cream, yoghurt, pizza?</span>
+                <input type="text" class="question-answer" v-model="questionThree">
+            </div>
+        </div>
+        <button type="submit" class="submit-btn">Submit Vote</button>
     </div>
     <script src="../Javascript/vote-confirmation.js"></script>
 </body>

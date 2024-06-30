@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="../styles/voting-page.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-
     <title>Cast your Vote!</title>
+   
 </head>
 <body>
     <div id="app">
         <div class="container">
             <h1>2024 Nigeria General Election</h1>
             <h2>Give Your Vote</h2>
-            <form @submit.prevent="submitVote">
+            <form @submit.prevent="showPopup">
                 <table>
                     <thead>
                         <tr>
@@ -35,12 +35,36 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="vote-button">
-                    <a href="./vote-confirmation.html">
-                        <i class='bx bx-right-arrow-alt'></i> Vote</a></button>
-                    </a>
+                <button class="vote-button" type="submit">
+                    <i class='bx bx-right-arrow-alt'></i> Vote
                 </button>
             </form>
+        </div>
+        <!-- Popup for vote confirmation -->
+        <div class="popup" :class="{show: isPopupVisible}">
+            <div class="popup-content">
+                <h1>Authorize your Vote!</h1>
+                <div class="ten-digit">
+                    <p>Please enter your assigned 10 Digit code</p>
+                    <input type="password" name="code" v-model="tenDigitCode">
+                </div>
+                <div class="questions">
+                    <div class="security-question">
+                        <span>What is your mother's maiden name?</span>
+                        <input type="text" class="question-answer" v-model="questionOne">
+                    </div>
+                    <div class="security-question">
+                        <span>What is your dream country?</span>
+                        <input type="text" class="question-answer" v-model="questionTwo">
+                    </div>
+                    <div class="security-question">
+                        <span>Ice cream, yoghurt, pizza?</span>
+                        <input type="text" class="question-answer" v-model="questionThree">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn" @click="submitVote">Submit Vote</button>
+                <button type="button" class="cancel-btn" @click="closePopup">Cancel</button>
+            </div>
         </div>
     </div>
     <script src="../Javascript/voting-page.js"></script>

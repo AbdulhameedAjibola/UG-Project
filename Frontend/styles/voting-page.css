@@ -129,3 +129,92 @@ th, td {
         padding: 6px 12px;
     }
 }
+
+
+/* POPUP STYLING */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.popup.show {
+    display: flex;
+}
+.popup-content {
+    color: black;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    color: black;
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom:5px ;
+}
+.cancel-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background-color: red;
+    color: black;
+    font-size: 14px;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.ten-digit,
+.questions {
+    margin-bottom: 20px;
+}
+
+.ten-digit p {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.security-question {
+    margin-bottom: 15px;
+}
+
+.security-question span {
+    font-size: 14px;
+    color: #666;
+}
+
+input.question-answer {
+    margin-top: 5px;
+}
