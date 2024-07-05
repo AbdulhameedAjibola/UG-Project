@@ -16,7 +16,7 @@ body
 }
 .image-container
 {
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../images/loginImage.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url(../images/Vote.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;

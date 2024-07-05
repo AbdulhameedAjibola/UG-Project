@@ -13,39 +13,27 @@
 </head>
 <body>
     <div class="container" id="app">
-       
         <div class="image-container">
             <!-- Image here -->
-
         </div>
         <div class="sign-up-container">
             <div class="text-container">
                 <h2>Login to your Account</h2>
-                    <p>Welcome back, We've missed you</p>
+                <p>Welcome back, We've missed you</p>
             </div>
-                <form class="sign-in-form">
-                    <!--email input-->
-                    <div class="input-check">
-                        <input type="email" placeholder="Email Address" name="email" id="email">
-                    <br>
-                        
-                    </div>
-                    <div class="input-check">
-                        <input type="number" placeholder="National Identification Number" name="nin" id="nin" v-model="nin">
-                        
-                        <sub class="error" v-if="!isValidNin()">Invalid NIN</small>
-                    </div>
-                    <!--password input-->
-                    <div class="input-check">
-                        <input :type="passwordFieldType" placeholder="password" name="nin" id="nin" v-model="password">
-                        <i :class="passwordToggleIcon" @click="togglePasswordVisibility"></i>                        <br>
-                        <sub v-if="!isValidPassword()" class="error">Please ensure your password contains <br> A small letter <br> A capital letter <br> A symbol <br> Not less than 8 characters </sub>
-                    </div>
-                </form>
+            <form class="sign-in-form" @submit.prevent="loginUser">
+                <div class="input-check">
+                    <input type="number" placeholder="National Identification Number" name="nin" id="nin" v-model="nin">
+                    <sub class="error" v-if="!isValidNin()">Invalid NIN</sub>
+                </div>
+                <div class="input-check">
+                    <input :type="passwordFieldType" placeholder="Password" name="password" id="password" v-model="password">
+                    <i :class="passwordToggleIcon" @click="togglePasswordVisibility"></i>
+                    <sub v-if="!isValidPassword()" class="error">Please ensure your password contains <br> A small letter <br> A capital letter <br> A symbol <br> Not less than 8 characters </sub>
+                </div>
                 <button type="submit" class="subButton">Login</button>
+            </form>
         </div>
-       
-        
     </div>
 
     <script src="../Javascript/login.js"></script>

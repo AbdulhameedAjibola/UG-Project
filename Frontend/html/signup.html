@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Sign-Up</title>
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="sign-up-container">
+            <h2>Create an account</h2>
+            <p>Let's get started, enjoy your stay here</p>
+            <form @submit.prevent="validateForm" class="sign-up-form" id="form">
+                <!---Input Fields--->
+                <div class="input-control" v-for="(input, index) in inputs" :key="index">
+                    <label :for="input.id">{{ input.label }}</label>
+                    <div class="password-wrapper" v-if="input.type === 'password'">
+                        <input :id="input.id" :type="input.visible ? 'text' : 'password'" class="form-input" v-model="form[input.id]" :placeholder="input.placeholder">
+                        <i :class="[input.visible ? 'fas fa-eye-slash' : 'fas fa-eye']" @click="toggleVisibility(index)"></i>
+                    </div>
+                    <input v-else :id="input.id" :type="input.type" class="form-input" v-model="form[input.id]" :placeholder="input.placeholder">
+                    <div class="error" v-if="errors[input.id]">{{ errors[input.id] }}</div>
+                </div>
+
+                <button class="buttons" type="submit">Create account &rarr;</button>
+            </form>
+            <button @click="redirectToLogin" class="login-button">Login to existing Account</button>
+        </div>
+    </div>
+    
+    <script src="../Javascript/register.js">
+        
+    </script>
+</body>
+</html>
