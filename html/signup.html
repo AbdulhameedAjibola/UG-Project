@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <title>Sign-Up</title>
 </head>
 <body>
@@ -28,15 +27,12 @@
                     <input v-else :id="input.id" :type="input.type" class="form-input" v-model="form[input.id]" :placeholder="input.placeholder">
                     <div class="error" v-if="errors[input.id]">{{ errors[input.id] }}</div>
                 </div>
-
-                <button class="buttons" type="submit">Create account &rarr;</button>
+                
             </form>
+            <button class="buttons" type="submit">Create account &rarr;</button>
             <button @click="redirectToLogin" class="login-button">Login to existing Account</button>
         </div>
     </div>
-    
-    <script src="../Javascript/register.js">
-        
-    </script>
+    <script src="../Javascript/register.js"></script>
 </body>
 </html>

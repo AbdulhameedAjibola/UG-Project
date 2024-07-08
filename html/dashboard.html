@@ -76,46 +76,39 @@
         </div>
         <div class="user-profile-section">
             
-            <div class="user-details">
-                <span>Email: <span class="detail">akoredeajibola091@gmail.com</span></span>
-                <span>Age: <span class="detail">23</span></span>
-                <span>Gender: <span class="detail">Male</span></span>
+            <div class="user-details" v-if="user">
+                <span>Email: <span class="detail">{{ user.email }}</span></span>
+                <span>Age: <span class="detail">{{ user.age }}</span></span>
+                <span>Gender: <span class="detail">{{ user.gender }}</span></span>
                 <span>Password:
-                    <input :type="passwordFieldType" class="detail" value="QWerty12@" readonly />
-                    <i :class="passwordToggleIcon" @click="togglePasswordVisibility"></i>
+                  <input :type="passwordFieldType" class="detail" value="Password has been hashed" readonly />
+                  <i :class="passwordToggleIcon" @click="togglePasswordVisibility"></i>
                 </span>
-                <span>NIN: <span class="detail">2328884772</span></span>
-                <span>Local Government: <span class="detail">Alimosho</span></span>
-                <span>State: <span class="detail">Lagos</span></span>
+                <span>NIN: <span class="detail">{{ user.nin }}</span></span>
+                <span>Local Government: <span class="detail">{{ user.localGovernment }}</span></span>
+                <span>State: <span class="detail">{{ user.state }}</span></span>
                 <span>Anonymous ID:
-                    <input :type="anonymousIdFieldType" class="detail" value="aww23482xjs" readonly />
-                    <i :class="anonymousIdToggleIcon" @click="toggleAnonymousIdVisibility"></i>
+                  <input :type="anonymousIdFieldType" class="detail" :value="user.anonymousId" readonly />
+                  <i :class="anonymousIdToggleIcon" @click="toggleAnonymousIdVisibility"></i>
                 </span>
-                <span>Phone Number: <span class="detail">08123456789</span></span>
+                <span>Phone Number: <span class="detail">{{ user.phoneNumber }}</span></span>
                 <span>10 digit Code:
-                    <input :type="tenDigitFieldType" class="detail" value="4449224011" readonly />
-                    <i :class="tenDigitToggleIcon" @click="toggletenDigitVisibility"></i>
+                  <input :type="tenDigitFieldType" class="detail" :value="user.tenDigitCode" readonly />
+                  <i :class="tenDigitToggleIcon" @click="toggleTenDigitVisibility"></i>
                 </span>
-                    
-            </div>
-            <div class="security-questions-sections">
-                <h2>Set Up your Security Questions for confirmation</h2>
-                <div class="security-questions">
-                    <div class="security-question">
-                        <span>What is your mother's maiden name?</span>
-                        <input type="text" class="question-answer">
-                    </div>
-                    <div class="security-question">
-                        <span>What is your dream country?</span>
-                        <input type="text" class="question-answer">
-                    </div>
-                    <div class="security-question">
-                        <span>icecream, yoghurt, pizza?</span>
-                        <input type="text" class="question-answer">
-                    </div>
-                </div>
-            </div>
-        </div>
+                <span>Security Answer 1:
+                  <input :type="securityAnswer1FieldType" class="detail" :value="user.securityAnswer1" readonly />
+                  <i :class="securityAnswer1ToggleIcon" @click="toggleSecurityAnswer1Visibility"></i>
+                </span>
+                <span>Security Answer 2:
+                  <input :type="securityAnswer2FieldType" class="detail" :value="user.securityAnswer2" readonly />
+                  <i :class="securityAnswer2ToggleIcon" @click="toggleSecurityAnswer2Visibility"></i>
+                </span>
+                <span>Security Answer 3:
+                  <input :type="securityAnswer3FieldType" class="detail" :value="user.securityAnswer3" readonly />
+                  <i :class="securityAnswer3ToggleIcon" @click="toggleSecurityAnswer3Visibility"></i>
+                </span>
+              </div>
     </div>
     <script src="../Javascript/dashboard.js"></script>
 </body>

@@ -12,7 +12,10 @@ let app = new Vue({
             nin: '',
             localGovernment: '',
             state: '',
-            phoneNumber: ''
+            phoneNumber: '',
+            securityAnswer1: '',
+            securityAnswer2: '',
+            securityAnswer3: ''
         },
         errors: {},
         inputs: [
@@ -25,7 +28,10 @@ let app = new Vue({
             { id: 'nin', type: 'number', placeholder: 'National Identification Number (NIN)', label: 'NIN:' },
             { id: 'localGovernment', type: 'text', placeholder: 'Local Government', label: 'Local Government:' },
             { id: 'state', type: 'text', placeholder: 'State', label: 'State:' },
-            { id: 'phoneNumber', type: 'text', placeholder: 'Phone Number', label: 'Phone Number:' }
+            { id: 'phoneNumber', type: 'text', placeholder: 'Phone Number', label: 'Phone Number:' },
+            { id: 'securityAnswer1', type: 'text', placeholder: 'Security Question 1 Answer', label: 'Mother Maiden Name:' },
+            { id: 'securityAnswer2', type: 'text', placeholder: 'Security Question 2 Answer', label: 'Grandmother Maiden Name:' },
+            { id: 'securityAnswer3', type: 'text', placeholder: 'Security Question 3 Answer', label: 'Winter or Summer:' }
         ]
     },
     methods: {
@@ -64,6 +70,15 @@ let app = new Vue({
             if (!this.form.phoneNumber) {
                 this.errors.phoneNumber = 'Phone Number is required';
             }
+            if (!this.form.securityAnswer1) {
+                this.errors.securityAnswer1 = 'Security Answer 1 is required';
+            }
+            if (!this.form.securityAnswer2) {
+                this.errors.securityAnswer2 = 'Security Answer 2 is required';
+            }
+            if (!this.form.securityAnswer3) {
+                this.errors.securityAnswer3 = 'Security Answer 3 is required';
+            }
 
             if (Object.keys(this.errors).length === 0) {
                 this.submitForm();
@@ -89,7 +104,10 @@ let app = new Vue({
                         state: this.form.state,
                         phoneNumber: this.form.phoneNumber,
                         anonymousId: null,
-                        tenDigitCode: null
+                        tenDigitCode: null,
+                        securityAnswer1: this.form.securityAnswer1,
+                        securityAnswer2: this.form.securityAnswer2,
+                        securityAnswer3: this.form.securityAnswer3
                     })
                 });
 
@@ -110,7 +128,7 @@ let app = new Vue({
             this.inputs[index].visible = !this.inputs[index].visible;
         },
         redirectToLogin() {
-            // Handle login redirect
+            window.location.href = './log-in.html';
         }
     }
 });

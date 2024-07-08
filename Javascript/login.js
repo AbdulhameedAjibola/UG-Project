@@ -9,7 +9,7 @@ let app = new Vue({
     },
     methods: {
         isValidNin() {
-            return this.nin.length === 5;
+            return this.nin.length === 8;
         },
         isValidPassword() {
             const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -37,6 +37,8 @@ let app = new Vue({
                     const data = await response.json();
                     console.log('Login successful, response data:', data);
                     alert("Login successful! Token: " + data.jwt);
+                    localStorage.setItem('jwtToken', data.jwt); // Store JWT token in local storage
+                    localStorage.setItem('nin', this.nin);
                     window.location.href = './dashboard.html';
                 } else {
                     const error = await response.text();

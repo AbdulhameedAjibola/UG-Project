@@ -214,6 +214,18 @@ body {
     column-gap: 60px;
     width: 900px;
 }
+.actionBtn {
+    background-color:antiquewhite;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+  }
 
 .user-details span {
     display: block;
